@@ -1,0 +1,50 @@
+@use '../custom' as *;
+@use '../global' as *;
+
+// .btn-angle-right {
+//     background: rgb(0 0 0 / 40%);
+//     border-radius: 0 8px 8px 0;
+//     position: absolute;
+//     top: -1px;
+//     bottom: -1px;
+//     right: -1px;
+// }
+
+// .btn-angle-right-m {
+//     @extend .btn-angle-right;
+//     padding: 15px;
+// }
+
+// .btn-angle-right-sm {
+//     @extend .btn-angle-right;
+//     padding: 7.75px 7.5px;
+// }
+
+.btn {
+    &:active {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-primary,
+.btn-secondary {
+    color: var(--#{$prefix}white);
+    transition: all 150ms linear;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-secondary:hover,
+.btn-secondary:focus {
+    color: var(--#{$prefix}white);
+}
